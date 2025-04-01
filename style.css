@@ -17,7 +17,7 @@ a {
 }
 
 /* Cabeçalho */
-header {
+#header {
     color: rgb(245, 238, 230);
     padding: 1rem 0;
     position: fixed;
@@ -27,7 +27,6 @@ header {
 }
 
 .container {
-    background-color: transparent;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -100,6 +99,7 @@ nav {
     font-family: Gravitas One;
     transform: scaleY(1.2);
     color: rgb(245, 238, 230);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.348);
 }
 
 .texto2{
@@ -400,7 +400,7 @@ footer {
     }
 
     .texto2 a{
-        margin-left: 180px;
+        margin-left: 150px;
     }
 
     .hero-content{
@@ -410,6 +410,21 @@ footer {
 
 @media (max-width: 400px) {
     .texto2 a{
-        margin-left: 140px;
+        margin-left: 130px;
+    }
+}
+
+@media (max-width: 500px) {
+    #hero{
+        width: 100%;
+        background: url('IMG_2656.png');
+        background-size: cover;
+        background-position: -100px;
+    }
+}
+
+@media (max-width: 500px) {
+    footer{
+        background: url('IMG_2656.png');
     }
 }
