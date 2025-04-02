@@ -15,13 +15,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Habibi&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header id="header">
+    <div id="header">
         <div class="container">
             <nav>
-                <div class="logo">Meu Portfólio</div>
+                <div class="logo">Portfólio</div>
                 <ul class="nav-links">
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#about">Sobre</a></li>
@@ -30,16 +35,20 @@
                 </ul>
             </nav>
         </div>
-    </header>
+        <div id="progress-bar"></div>
+    </div>
+
     <section id="hero">
         <div class="container2">
             <div class="hero-content">
                 <div class="texto1">
                     <h1>Guilherme</h1>
-                    <h1>Costa</h1>
+                    <h1>Costa <p id="data-atual">Carregando data...</p>
+                    </h1>
                 </div>
                 <div class="texto2">
                     <div>
+                        <!-- <p id="data-atual">Carregando data...</p> -->
                         <p>Estudante de Programação Full-Stack com paixão por criar obras digitais incríveis e
                             funcionais.</p>
                         <a href="#projects" class="btn">Ver Meus Projetos</a>
@@ -59,7 +68,8 @@
                         mauris. Vivamus hendrerit
                         arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
                     </p>
-                    <p style="max-width: 600px;">Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis
+                    <p style="max-width: 600px;">Ut in nulla enim. Phasellus molestie magna non est bibendum non
+                        venenatis
                         nisl tempor.
                         Suspendisse dictum feugiat nisl ut dapibus.</p>
 
@@ -81,7 +91,7 @@
         </div>
     </section>
     <section id="projects">
-        <div class="container">
+        <div class="container4">
             <h2 class="section-title">Meus Projetos</h2>
             <div class="projects-grid">
                 <div class="project-card">
@@ -152,7 +162,7 @@
     </section>
     <footer>
         <div class="container" id="fim">
-            <p>&copy; Guilherme Costa</p>
+            <p>Guilherme Costa</p>
             <div class="social-links">
                 <a href="#" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -205,6 +215,38 @@
                 header.classList.remove("header-scroll");
             }
         });
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            const scrollPosition = window.scrollY;
+
+            // Adiciona classe 'scrolled' quando rolar mais de 100px
+            if (scrollPosition > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        window.addEventListener('scroll', function () {
+            // Calcula o progresso do scroll
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 100;
+
+            // Atualiza a largura da barra de progresso
+            document.getElementById('progress-bar').style.width = scrollProgress + '%';
+        });
+
+        const opcoes = {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            locale: 'pt-BR' // Formato em português
+        };
+
+        const dataExtenso = new Date().toLocaleDateString('pt-BR', opcoes);
+        document.getElementById('data-atual').textContent = dataExtenso;
     </script>
 </body>
 
