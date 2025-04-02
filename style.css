@@ -127,7 +127,7 @@ nav {
     font-family: IBM Plex Serif;
     font-size: 1.2rem;
     margin-left: 50px;
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 .hero-container {
@@ -154,6 +154,7 @@ nav {
     transform: scaleY(1.2);
     color: rgb(245, 238, 230);
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.348);
+    font-weight: lighter;
 }
 
 .texto2 {
@@ -318,11 +319,10 @@ nav {
 }
 
 /* Seção Contato */
-#contact {
+/* #contact {
     padding: 5rem 0;
-    /* background-color: white; */
     background-color:rgb(29, 29, 47) ;
-}
+} */
 
 .contact-form {
     max-width: 600px;
@@ -370,27 +370,87 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem 0;
-    background: url('baixados\ \(1\).jpg');
-    background-position: center;
+    background: url('herobg-hd.jpg');
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
-    text-shadow: 1px 1px 9px black;
+    /* text-shadow: 1px 1px 9px black; */
+    
+    h2{
+        margin-bottom: 30px;
+        font-family: IBM Plex Serif;
+    }
 }
 
 .social-links {
-    margin: 1rem 0;
-}
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    /* Cor de fundo opcional */
+    font-family: 'Arial', sans-serif;
+  }
 
-.social-links a {
+  .social-links h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* Espaçamento entre os ícones */
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    color: #555;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-icon:hover {
+    transform: translateY(-3px);
+    /* box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); */
+  }
+
+  /* Cores personalizadas por rede social */
+  .social-icon:nth-child(1):hover {
+    background: rgb(3, 193, 3);
     color: white;
-    margin: 0 1rem;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
+  }
 
-.social-links a:hover {
-    color: #3498db;
-}
+  /* Facebook */
+  .social-icon:nth-child(2):hover {
+    background: #1da1f2;
+    color: white;
+  }
+
+  /* Twitter */
+  .social-icon:nth-child(3):hover {
+    background: #e4405f;
+    color: white;
+  }
+
+  /* Instagram */
+  .social-icon:nth-child(4):hover {
+    background: #0077b5;
+    color: white;
+  }
+
+  /* LinkedIn */
+  .social-icon:nth-child(5):hover {
+    background: rgb(19, 6, 153);
+    color: white;
+  }
 
 /* Responsividade */
 @media (max-width: 768px) {
