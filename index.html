@@ -20,7 +20,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Habibi&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -65,26 +66,32 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Estudante de Programação Full-Stack</h3>
-                    <p style="max-width: 600px;">Olá! Meu nome é Guilherme, sou um apaixonado por tecnologia e atualmente estou cursando Desenvolvimento Full Stack. Estou em constante aprendizado, explorando tanto o Front-end quanto o Back-end para me tornar um profissional completo e capaz de criar soluções digitais robustas e intuitivas.
+                    <p style="max-width: 600px;">Olá! Meu nome é Guilherme, sou um apaixonado por tecnologia e
+                        atualmente estou cursando Desenvolvimento Full Stack. Estou em constante aprendizado, explorando
+                        tanto o Front-end quanto o Back-end para me tornar um profissional completo e capaz de criar
+                        soluções digitais robustas e intuitivas.
                     </p>
-                    <p style="max-width: 600px;">Busco oportunidades para aplicar meus conhecimentos em projetos reais, contribuir com soluções inovadoras e crescer junto com a equipe. Meu foco é me tornar um Desenvolvedor Full Stack altamente capacitado, combinando criatividade e lógica para construir aplicações eficientes e impactantes.</p>
+                    <p style="max-width: 600px;">Busco oportunidades para aplicar meus conhecimentos em projetos reais,
+                        contribuir com soluções inovadoras e crescer junto com a equipe. Meu foco é me tornar um
+                        Desenvolvedor Full Stack altamente capacitado, combinando criatividade e lógica para construir
+                        aplicações eficientes e impactantes.</p>
 
                     <h3 style="margin-top: 1.5rem;">Minhas Habilidades</h3>
                     <div class="skills">
                         <span class="skill">HTML</span>
                         <span class="skill">CSS</span>
                         <span class="skill">JavaScript</span>
-                        <!-- <span class="skill">React</span> -->
-                        <!-- <span class="skill">Node.js</span> -->
                         <span class="skill">Python</span>
                         <span class="skill">GitHub</span>
                     </div>
                 </div>
-                <!-- <div class="about-image">
-                    <img src="Captura de tela 2025-03-30 182128.png" alt="Minha Foto">
-                </div> -->
+                <div>
+                    <model-viewer src="statua_toro.glb" style="width: 600px; height: 600px;" auto-rotate></model-viewer>
+                </div>
             </div>
+
         </div>
+
     </section>
     <section id="projects">
         <div class="container4">
@@ -92,12 +99,13 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="screenshot-1743339242316.png" alt="Projeto 1">
+                        <img src="imagens/screenshot-1743339242316.png" alt="Projeto 1">
                     </div>
                     <div class="project-info">
                         <div class="project-text">
                             <h3>GasPro</h3>
-                            <p>Um site feito para te auxiliar na hora de abastecer, mostrando os postos mais perto de você.
+                            <p>Um site feito para te auxiliar na hora de abastecer, mostrando os postos mais perto de
+                                você.
                             </p>
                         </div>
                         <div class="project-links">
@@ -109,7 +117,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="screenshot-1743339537918.png" alt="Projeto 2">
+                        <img src="imagens/screenshot-1743339537918.png" alt="Projeto 2">
                     </div>
                     <div class="project-info">
                         <div class="project-text">
@@ -126,7 +134,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="screenshot-1743339743767.png" alt="Projeto 3">
+                        <img src="imagens/screenshot-1743339743767.png" alt="Projeto 3">
                     </div>
                     <div class="project-info">
                         <div class="project-text">
@@ -188,83 +196,7 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        const contactForm = document.getElementById('contactForm');
-
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            console.log(`Nome: ${name}, Email: ${email}, Mensagem: ${message}`);
-
-            // alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            // contactForm.reset();
-        });
-
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = 'rgba(44, 62, 80, 0.9)';
-            } else {
-                header.style.backgroundColor = '#2c3e50';
-            }
-        });
-
-        window.addEventListener("scroll", function () {
-            var header = document.getElementById("header");
-            if (window.scrollY > 50) {
-                header.classList.add("header-scroll");
-            } else {
-                header.classList.remove("header-scroll");
-            }
-        });
-        window.addEventListener('scroll', function () {
-            const header = document.getElementById('header');
-            const scrollPosition = window.scrollY;
-
-            // Adiciona classe 'scrolled' quando rolar mais de 100px
-            if (scrollPosition > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        window.addEventListener('scroll', function () {
-            // Calcula o progresso do scroll
-            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollProgress = (scrollTop / scrollHeight) * 100;
-
-            // Atualiza a largura da barra de progresso
-            document.getElementById('progress-bar').style.width = scrollProgress + '%';
-        });
-
-        const opcoes = {
-            weekday: 'long',
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric',
-            locale: 'pt-BR' // Formato em português
-        };
-
-        const dataExtenso = new Date().toLocaleDateString('pt-BR', opcoes);
-        document.getElementById('data-atual').textContent = dataExtenso;
-    </script>
 </body>
+<script src="scripts.js"></script>
 
 </html>
