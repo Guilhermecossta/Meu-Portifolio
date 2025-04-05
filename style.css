@@ -5,6 +5,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#loading-bar {
+    display: none !important;
+    /* Oculta a barra */
+}
+
 body {
     color: #333;
     line-height: 1.6;
@@ -124,7 +129,7 @@ nav {
     }
 }
 
-#data-atual{
+#data-atual {
     font-family: IBM Plex Serif;
     font-size: 1.2rem;
     margin-left: 50px;
@@ -201,7 +206,7 @@ nav {
 /* Seção Sobre */
 #about {
     padding: 5rem 0;
-    background-color:rgb(29, 29, 47) ;
+    background-color: rgb(29, 29, 47);
 
 }
 
@@ -221,7 +226,7 @@ nav {
     gap: 2rem;
 }
 
-.toro{
+.toro {
     margin: auto;
 }
 
@@ -267,7 +272,7 @@ nav {
 #projects {
     padding: 5rem 0;
     /* background-color: #f5f5f5; */
-    background-color:rgb(18, 18, 29) ;
+    background-color: rgb(18, 18, 29);
 }
 
 .projects-grid {
@@ -308,7 +313,7 @@ nav {
     padding: 1.5rem;
 }
 
-.project-text{
+.project-text {
     height: 150px;
 }
 
@@ -385,8 +390,8 @@ footer {
     background-size: cover;
     background-attachment: fixed;
     /* text-shadow: 1px 1px 9px black; */
-    
-    h2{
+
+    h2 {
         margin-bottom: 30px;
         font-family: IBM Plex Serif;
     }
@@ -398,22 +403,22 @@ footer {
     background: #f8f9fa;
     /* Cor de fundo opcional */
     font-family: 'Arial', sans-serif;
-  }
+}
 
-  .social-links h2 {
+.social-links h2 {
     margin-bottom: 1.5rem;
     color: #333;
-  }
+}
 
-  .social-icons {
+.social-icons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     /* Espaçamento entre os ícones */
     flex-wrap: wrap;
-  }
+}
 
-  .social-icon {
+.social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -425,42 +430,42 @@ footer {
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     transition: all 0.3s ease;
     text-decoration: none;
-  }
+}
 
-  .social-icon:hover {
+.social-icon:hover {
     transform: translateY(-3px);
     /* box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); */
-  }
+}
 
-  /* Cores personalizadas por rede social */
-  .social-icon:nth-child(1):hover {
+/* Cores personalizadas por rede social */
+.social-icon:nth-child(1):hover {
     background: rgb(3, 193, 3);
     color: white;
-  }
+}
 
-  /* Facebook */
-  .social-icon:nth-child(2):hover {
+/* Facebook */
+.social-icon:nth-child(2):hover {
     background: #1da1f2;
     color: white;
-  }
+}
 
-  /* Twitter */
-  .social-icon:nth-child(3):hover {
+/* Twitter */
+.social-icon:nth-child(3):hover {
     background: #e4405f;
     color: white;
-  }
+}
 
-  /* Instagram */
-  .social-icon:nth-child(4):hover {
+/* Instagram */
+.social-icon:nth-child(4):hover {
     background: #0077b5;
     color: white;
-  }
+}
 
-  /* LinkedIn */
-  .social-icon:nth-child(5):hover {
+/* LinkedIn */
+.social-icon:nth-child(5):hover {
     background: rgb(19, 6, 153);
     color: white;
-  }
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -508,18 +513,11 @@ footer {
 }
 
 @media (max-width: 500px) {
-    /* .texto1{
-        position: absolute;
-        top: 20%;
-        left: 3%;
-        margin-left: 0;
-    } */
-
     .texto1 h1 {
         font-size: 2.6rem;
     }
 
-    #data-atual{
+    #data-atual {
         margin-left: 0;
     }
 
@@ -538,6 +536,26 @@ footer {
 
     .hero-content {
         flex-wrap: wrap;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .toro {
+
+        model-viewer {
+            max-width: 300px;
+            height: 600px;
+            margin: auto;
+        }
+
+    }
+
+    #hero{
+        background: url('imagens/herobg-hd.jpg');
+        background-size: cover;
+        background-position: center;
     }
 }
 
