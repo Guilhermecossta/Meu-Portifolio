@@ -221,6 +221,10 @@ nav {
     gap: 2rem;
 }
 
+.toro{
+    margin: auto;
+}
+
 .about-text {
     flex: 1;
     min-width: 300px;
